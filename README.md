@@ -1,2 +1,2 @@
-# spectroscopy
+# Spectroscopy
 Scripts for light spectroscopy
