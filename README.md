@@ -36,3 +36,5 @@ A = np.arange(1,19)
 ![](/images/AS7265x_BLUE.png)
 ### White LED
 ![](/images/AS7265x_WHITE.png)
+### Infrared LED from a remote control
+![](/images/AS7265x_IR.png)
