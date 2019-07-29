@@ -40,6 +40,9 @@ measurements = np.array([\
 # 41.89,721.52,476.71,328.46,421.19,299.83,404.81,359.35,119.75,13.76,11.26,12.49,526.87,61.92,30.76,17.30,22.91,12.23\
 # ]) # white LED
 
+# measurements = np.array([\
+# 0.99,2.86,1.84,5.53,8.32,4.28,2.16,5.28,1.71,1.66,106.76,177.44,2.44,12.34,0.96,1.76,11.13,46.55\
+# ]) # IR LED
 
 # Sort data in the order of increasing wavelengths
 data = np.hstack((channels[:,np.newaxis],measurements[:,np.newaxis]))
