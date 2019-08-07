@@ -60,3 +60,12 @@ y_norm = np.where(y > 0, y/np.max(y), y)
 ```
 
 Comment this line if you don't want your specta normalized.
+
+In the Arduino sketch, comment or remove the lines
+
+```C++
+//Serial.println("AS7265x Spectral Triad");
+
+//Serial.println("A,B,C,D,E,F,G,H,I,J,K,L,R,S,T,U,V,W");
+```
+so that only numeric arrays are sent to the serial port.
