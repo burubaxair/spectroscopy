@@ -68,4 +68,4 @@ In the Arduino sketch, comment or remove the lines
 
 //Serial.println("A,B,C,D,E,F,G,H,I,J,K,L,R,S,T,U,V,W");
 ```
-so that only numeric arrays are sent to the serial port.
+so that only the numeric arrays of measurements are sent to the serial port.
