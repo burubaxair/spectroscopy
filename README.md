@@ -3,6 +3,8 @@ Scripts for light spectroscopy
 
 [AS7265x_plot.py](https://github.com/burubaxair/spectroscopy/blob/master/AS7265x_plot.py) - a python script for plotting light spectra obtained from the Sparkfun's [AS7265x spectrophotometer](https://www.sparkfun.com/products/15050).
 
+[AS7265x_animate.py](https://github.com/burubaxair/spectroscopy/blob/master/AS7265x_animate.py) - Similar to [AS7265x_plot.py](https://github.com/burubaxair/spectroscopy/blob/master/AS7265x_plot.py) but it reads the input from the serial port, updates the figure in real time, saves the measurements into a log file, and saves the figure when the Space key is pressed. 
+
 ## Details of the AS7265x_plot.py
 
 `measurements` - the array of measurements from the sensors. Copy the measurements (e.g. from the Arduino serial monitor) to this array.
@@ -38,3 +40,23 @@ A = np.arange(1,19)
 ![](/images/AS7265x_WHITE.png)
 ### Infrared LED from a remote control
 ![](/images/AS7265x_IR.png)
+
+## Details of the AS7265x_animate.py
+
+No need to manually copy the measurements from the Arduino serial monitor. You don't even have to start Arduino serial monitor.
+
+Specify the serial port, the name of the log file and the folder where to save the figures
+
+```python
+ser = serial.Serial('COM3',9600)
+logfile = 'log.txt'
+figdir = 'tst' # folder to save figures
+```
+
+The spectrum is normalized with the line
+
+```python
+y_norm = np.where(y > 0, y/np.max(y), y)
+```
+
+Comment this line if you don't want your specta normalized.
