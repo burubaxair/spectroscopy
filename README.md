@@ -53,14 +53,6 @@ logfile = 'log.txt'
 figdir = 'tst' # folder to save figures
 ```
 
-The spectrum is normalized with the line
-
-```python
-y_norm = np.where(y > 0, y/np.max(y), y)
-```
-
-Comment this line if you don't want your specta normalized.
-
 In the Arduino sketch, comment or remove the lines
 
 ```C++
