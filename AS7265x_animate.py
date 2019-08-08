@@ -125,12 +125,11 @@ def animate(i):
     y = np.where(x <= wl[0], A[0]*g(x,wl[0]), y)
     y = np.where(x > wl[-1], A[-1]*g(x,wl[-1]), y)
 
-    y_norm = np.where(y > 0, y/np.max(y), y)
-    i_max = np.argmax(y_norm)
+    i_max = np.argmax(y)
     
     # Plot the spectrum
     ax1.clear()
-    ax1.scatter(x, y_norm, color=colors,s=1)
+    ax1.scatter(x, y, color=colors,s=1)
 
     ax1.grid()
     
